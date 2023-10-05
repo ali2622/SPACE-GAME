@@ -1,0 +1,930 @@
+
+@font-face {
+    font-family:myFirstFont ;
+    src: url(../font/Barella\ \ -\ Stamp.ttf);
+}
+@font-face {
+    font-family: secfont;
+    src: url(../font/Foresto\ Creepy.otf);
+}
+@font-face {
+    font-family: xbox;
+    src: url(../font/X360.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: myFirstFont;
+    scroll-behavior: smooth;
+}
+
+body{
+background:var(--bg-color);
+height: 1220vh;
+}
+
+:root{
+    --bg-color: #1a0327;
+    --second-bg-color: #550381;
+    --text-color: white;
+    --main-color: #fec53a;
+    --second-text-color:black;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../IMG/Wall\ Mural\ -\ Fun\ Symbols\ -\ Wall\ Mural\ -\ Fun\ Symbols.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header{
+    width: 100%;
+    height: 10vh;
+    background-position: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed ;
+    top: 0;
+    z-index: 100;
+}
+.logo{
+    width: 300px;
+    height: 10vh;
+    background:var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+    padding: 10px;
+    line-height: 1.4rem;
+}
+.logo .fa-solid {
+    font-size:60px;
+}
+.logo p{
+    font-family: secfont;
+    width: 180px;
+    margin-left:10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.navbar{
+    list-style-type: none;
+    display: flex;
+}
+.navbar li{
+    width:120px;
+}
+.navbar li a{
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.navbar li a.active{
+    color: var(--main-color);
+    text-decoration: underline;
+
+}
+.navbar li a:hover:not(.active){
+    text-decoration: underline;
+    transition: 0.7s;
+    color: var(--main-color);
+}
+
+#btn{
+    width: 250px;
+    height: 10vh;
+    background:var(--main-color);
+    color: var(--second-text-color);
+    outline: none;
+    border: none;
+    clip-path: polygon(36% 0, 100% 0, 100% 100%, 0% 100%);
+    font-size: 28px;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 15px;
+}
+#btn .fa-solid{
+    margin-right: 8px;
+}
+/* start content section */
+.content-box{
+    width: 80%;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+.content-cont h1{
+    color:var(--main-color);
+    font-family: secfont;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+.content-cont p{
+    width: 550px;
+    font-size: 2.3rem;
+    line-height: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    
+}
+.content-cont span{
+    color:var(--main-color);
+    
+}
+#btn-2{
+    width: 300px;
+    height: 10vh;
+    outline: none;
+    border: none;
+    background: var(--main-color);
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin-top: 15px; 
+    margin-right: 35px;
+    border-radius: 20px;
+}
+#btn-3{
+    color: #fec53a;
+    width: 350px;
+    height: 10vh;
+    outline: none;
+    border: solid var(--main-color);
+    background: rgba(0,0,0,0.5);
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin-top: 15px; 
+    margin-right: 35px;
+    border-radius: 20px;
+}
+#btn-2 .fa-solid,
+#btn-3 .fa-solid{
+    margin-left: 10px;
+}
+#btn-2:hover{
+    opacity: 0.5;
+}
+#btn-3:hover{
+    background-color: #252525;
+}
+.boximg{
+    width: 300px;
+    height: 400px;    
+    position: relative;
+    
+}
+.boximg::after{
+    content: '';
+    width: 400px;
+    height: 450px;
+    background: url(../IMG/Picsart_23-09-16_03-00-29-512.png);
+    background-size:cover ;
+    background-position:center;
+    position: absolute;
+    bottom: 0;
+    left: -150px;
+}
+.section-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+.section-logo h1{
+    width: 250px;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin:10px;
+    font-family: secfont;
+
+}
+.section-logo .fa-solid{
+    color: var(--main-color);
+    font-size: 6rem;
+}
+.ps5{
+    width: 100%;
+    height: 95vh;
+    background: linear-gradient(rgba(0,0,0,0.767),rgba(0,0,0,0.712)),
+    url(../IMG/Comics\ Superhero\ HD\ Wallpaper\ by\ Mdpadyab.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.ps5 h2{
+    padding-top: 70px;
+    margin: 50px 30px 30px;
+    text-align: center;
+    font-size: 75px;
+    color: rgb(143, 2, 2);
+    font-family: secfont;
+}
+.ps5 h2 span{
+    font-family: secfont;
+    color:var(--main-color);
+
+}
+.ps5-box{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) );
+    background-position: center;
+    margin: 4%;
+    float: left;
+    width: 25%;
+    height: 50vh;
+    border: solid 2px red;
+    text-align: center;
+    position: relative;
+    color: #fec53a;
+    z-index: 1;
+    /* overflow: hidden; */
+    transition: .5s;
+
+}
+.ps5-box::before{
+    background-color: #E73C37;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background:linear-gradient(rgba(121, 21, 21, 0.5),rgba(0,0,0,0.5) );
+
+    z-index: -1;
+    transition: .5S;
+}
+.ps5-box:hover::before{
+    height: 100%;
+}
+.ps5-box h3{
+    top: 0;
+    font-size: 50px;
+    background-color: var(--second-bg-color);
+    border-bottom: dashed 2px var(--main-color);
+}
+.ps5-box a{
+    display: flex;
+    text-decoration: none;
+    position: absolute;
+    border: solid 2px var(--main-color);
+    font-size: 35px;
+    bottom: -6%;
+    left: 26%;
+    background-color: #550381;
+    border-radius: 15px;
+    color: #fec53a;
+    padding: 5px;
+}
+.ps5-box .img1{
+    width: 400px;
+    position: absolute;
+    bottom: 20px;
+    left: 20%;
+}
+.ps5-box .img2{
+    width: 400px;
+    position: absolute;
+    bottom: 20px;
+    left: 1%;
+}
+.ps5-box .img3{
+    width: 200px;
+    position: absolute;
+    bottom: 5px;
+    left: 20%;
+}
+.ps5-box p{
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.ps5-box a:hover{
+    background-color: #fec53a;
+    color: #550381;
+    border:solid 4px #550381;
+}
+
+.ps4{
+    width: 100%;
+    height: 95vh;
+    background: linear-gradient(rgba(0,0,0,0.767),rgba(0,0,0,0.712)),
+    url(../IMG/Mercedes\ AMG\ GT-R\,matt\ black\ with\ red\ details\,4K\ Full\ HD\,1920x1080\ Wallpaper.jpeg);
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+.ps4 h2{
+    padding-top: 70px;
+    margin: 50px 30px 30px;
+    text-align: center;
+    font-size: 75px;
+    color: rgb(143, 2, 2);
+    font-family: secfont;
+}
+.ps4 h2 span{
+    font-family: secfont;
+    color:var(--main-color);
+
+}
+.ps4-box{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) );
+    background-position: center;
+    margin: 4%;
+    float: left;
+    width: 25%;
+    height: 50vh;
+    border: solid 2px red;
+    text-align: center;
+    position: relative;
+    color: #fec53a;
+    z-index: 1;
+    /* overflow: hidden; */
+    transition: .5s;
+
+}
+.ps4-box::before{
+    background-color: #E73C37;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background:linear-gradient(rgba(121, 21, 21, 0.5),rgba(0,0,0,0.5) );
+    z-index: -1;
+    transition: .5S;
+}
+.ps4-box:hover::before{
+    height: 100%;
+}
+.ps4-box h3{
+    top: 0;
+    font-size: 50px;
+    background-color: var(--second-bg-color);
+    border-bottom: dashed 2px var(--main-color);
+}
+.ps4-box a{
+    display: flex;
+    text-decoration: none;
+    position: absolute;
+    border: solid 2px var(--main-color);
+    font-size: 35px;
+    bottom: -6%;
+    left: 26%;
+    background-color: #550381;
+    border-radius: 15px;
+    color: #fec53a;
+    padding: 5px;
+}
+.ps4-box p{
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.ps4-box .img1{
+    width: 250px;
+    position: absolute;
+    bottom: 20px;
+    left: 20%;
+}
+.ps4-box .img2{
+    width: 300px;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+}
+.ps4-box a:hover{
+    background-color: #fec53a;
+    color: #550381;
+    border:solid 4px #550381;
+}
+.xbox{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.767),rgba(0,0,0,0.712)),
+    url(../IMG/Xbox\ All\ Access_\ Xbox\ Console\ &\ Over\ 100\ Games\ _\ Xbox.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* position: relative; */
+    
+}
+.xbox h2{
+    padding-top: 70px;
+    margin: 50px 30px 30px;
+    text-align: center;
+    font-size: 75px;
+    color: #107C10;
+    font-family: xbox;
+    
+}
+.xbox-box{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) );
+    background-position: center;
+    margin: 4%;
+    float: left;
+    width: 25%;
+    height: 50vh;
+    border: solid 2px #107C10;
+    text-align: center;
+    position: relative;
+    color: #107C10; z-index: 1;
+    /* overflow: hidden; */
+    transition: .5s;
+
+}
+.xbox-box::before{
+    background-color: #E73C37;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background:linear-gradient(rgba(1, 107, 13, 0.5),rgba(0,0,0,0.5) );
+    z-index: -1;
+    transition: .5S;
+}
+.xbox-box:hover::before{
+    height: 100%;
+}
+.xbox-box h3{
+    font-family: xbox;
+    top: 0;
+    font-size: 50px;
+    background-color:white;
+    border-bottom: dashed 2px #107C10;
+    font-weight: 600;
+}
+.xbox-box a{
+    display: flex;
+    text-decoration: none;
+    position: absolute;
+    border: solid 2px #107C10;
+    font-size: 35px;
+    bottom: -6%;
+    left: 26%;
+    background-color: white;
+    border-radius: 15px;
+    color: #107C10;
+    padding: 5px;
+}
+.xbox-box p{
+    font-family: xbox;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.xbox-box .img1{
+    width: 250px;
+    position: absolute;
+    bottom: 10px;
+    left: 15%;
+}
+.xbox-box .img2{
+    width: 250px;
+    position: absolute;
+    bottom: 0px;
+    left: 15%;
+}
+.xbox-box a:hover{
+    background-color: #107C10;
+    color: white;
+    border:solid 4px white;
+}
+.game{
+    width: 100%;
+    height: 215vh;
+    background: linear-gradient(rgba(0,0,0,0.767),rgba(0,0,0,0.712)),
+    url(../IMG/Illustrations\ for\ cyber\ sport\ club.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.game a{
+    text-decoration: none;
+}
+.game h2{
+    padding-top: 70px;
+    text-align: center;
+    font-size: 75px;
+    color: rgb(143, 2, 2);
+    font-family: secfont;
+}
+.game h2 span{
+    font-family: secfont;
+    color:var(--main-color);
+
+}
+#type{
+    /* padding-top: 70px; */
+    margin: 30px 90px;
+    text-align: center;
+    font-size: 75px;
+    color: rgb(143, 2, 2);
+    font-family: secfont;
+}
+#type span{
+    font-family: secfont;
+    color:var(--main-color);
+
+}
+.ps5-game{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.ps5-game img{
+    width: 180px;
+    height: 200px;
+    background-size:contain;
+    background-position: center;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.ps5-game h3{
+    width: 180;
+    font-size:35px;
+    text-align: center;
+    color: #fec53a;
+    /* display: flex; */
+    text-decoration: none;
+    /* margin:15px 40px; */
+}
+.ps5-game img:hover{
+    width: 280px;
+    height: 300px;
+    transition: .7s;
+}
+.ps4-game{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0 55px; */
+    padding: 0 15px;
+}
+.ps4-game img{
+    width: 180px;
+    height: 200px;
+    background-size:contain;
+    background-position: center;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.ps4-game h3{
+    width: 180;
+    font-size:35px;
+    text-align: center;
+    color: #fec53a;
+    /* display: flex; */
+    text-decoration: none;
+    /* margin:15px 40px; */
+}
+.ps4-game img:hover{
+    width: 280px;
+    height: 300px;
+    transition: .7s;
+}
+#xbox-game {
+    padding-top: 40px;
+    margin: 50px 30px 30px;
+    text-align: center;
+    font-size: 75px;
+    color: #107C10;
+    font-family: xbox;
+    
+}
+.xbox-game{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0 55px; */
+    padding: 0 15px;
+}
+.xbox-game img{
+    width: 180px;
+    height: 200px;
+    background-size:contain;
+    background-position: center;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.xbox-game h3{
+    width: 180;
+    font-size:35px;
+    text-align: center;
+    color: #fec53a;
+    /* display: flex; */
+    text-decoration: none;
+    /* margin:15px 40px; */
+}
+.xbox-game img:hover{
+    width: 280px;
+    height: 300px;
+    transition: .7s;
+}
+.gift-card{
+    width: 100%;
+    height: 180vh;
+    background: linear-gradient(rgba(0,0,0,0.767),rgba(0,0,0,0.712)),
+    url(../IMG/PlayStation®\ DualShock.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: myFirstFont;
+}
+.gift-card h1{
+    padding-top: 70px;
+    text-align: center;
+    font-size: 75px;
+    color: rgb(143, 2, 2);
+    font-family: secfont;
+}
+.gift-card h1 span{
+    padding-top: 70px;
+    text-align: center;
+    font-size: 75px;
+    color:var(--main-color);
+    font-family: secfont;
+    
+}
+.line{
+    width: 220px;
+    height: 5px;
+    background: var(--main-color);
+    margin: -20px 620px;
+}
+table{
+    margin: 75px auto;
+}
+h2{
+    font-weight:bold;
+
+}
+.price{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px var(--main-color) solid;
+    margin:20px auto;
+}
+.price1{
+    margin: 25px 0;
+    font-size: 34px;
+    font-weight:bolder;
+    font-family:'Courier New', Courier, monospace
+
+}
+
+td{
+    color:white;
+    display: block;
+    width: 200px;
+    height: 500px;
+    /* background-color: var(--bg-color); */
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) );
+}
+.item1{
+    border: 2px var(--main-color) solid;
+    text-align: center;
+    margin: 20px;
+    border-radius: 20px;
+    float: left;
+}
+.item1 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.item1 img{
+    margin: 20px 0 8px 0;
+    width: 150px;
+    height: 180px;
+}
+.btn{
+    margin:20px auto;
+    width: 150px;
+    height: 22px;
+    background-color:var(--bg-color);
+    border: 2px var(--main-color) solid;
+    color: white;
+    font-size: 17px;
+    border-radius: 20px;
+    font-weight:bolder;
+
+}
+.btn:hover{
+    width: 200px;
+    height:50px;
+    transition: .7s;
+    background: #E73C37;
+    font-weight:900;
+    border-radius: 20px;
+
+}
+.price:hover{
+    background: var(--main-color);
+    transition: .5s;
+    opacity: .7;
+    width: 175px;
+    height: 175px;
+    margin: auto;
+    color:#252525;
+    border: solid 2px #252525;
+}
+.rate{
+    margin-top: 150px;
+    width: 100%;
+    height: 40vh;
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../IMG/271b5d44-a4ff-42fc-b898-fb558311c259.jpeg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+    font-size: 35px;
+    text-align: center;
+    padding: 40px;
+    line-height: 65px;
+    font-weight: 800;
+}
+.rate i{
+    margin: 0px;
+    font-size: 80px;
+}
+footer{
+    padding: 40px;
+
+}
+.footer-body{   
+    margin-left: 370px;
+    width: 50%;
+    margin-top: 70px;
+    background-color: #fec53a;
+    border-radius: 20px;
+}
+.footer-body ul{
+    padding: 20px 0;
+    list-style-type: none;
+    text-align: center;
+    font-size:40px;
+    color: var(--main-color);
+    
+}
+.footer-body a{
+    color: #550381;
+    text-decoration: none;
+}
+
+.footer-body li{
+    margin: 20px;
+}
+.footer-body i{
+    margin-right: 30px;
+    font-size: 50px;
+}
+.footer-body p{
+    text-align: center;
+    font-size: 25px;
+}
+.footer-body i:hover{
+    transition: 0.7s;
+    color:green;
+}
+.about{
+    width: 100%;
+    height: 200vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../IMG/download\ \(4\).jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.about h2{
+    font-size: 50px;
+    color:red;
+    text-align: center;
+    padding: 60px 0 20px 0 ;
+}
+.serves{
+    margin-top: 80px;
+    overflow: hidden;
+}
+.serv1{
+    margin: 20px;
+    width: 30%;
+    height: 25vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,1)),url(../IMG/Download\ wallpapers\ 4k\,\ Game\ Over\,\ art\,\ grid\,\ violet\ background\ for\ desktop\ with\ resolution\ 1080x1920_\ High\ Quality\ HD\ pictures\ wallpapers.jpeg);
+    background-size: cover;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    border-radius: 50px;
+    border: 2px solid var(--main-color);
+    color: #107C10; 
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+}
+.serv1::before{
+    background-color: #E73C37;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background:linear-gradient(rgba(225, 4, 4, 0.8),rgba(0,0,0,0.8));
+    z-index: -1;
+    transition: .5S;
+}
+.serv1:hover::before{
+    width: 100%;
+}
+.serv1 i{
+    padding-right: 15px;
+}
+.serv1 h3{
+    margin-top: 25px;
+    font-size: 45px;
+    font-weight: 600;
+    color: #fec53a;
+
+}
+.serv1 p{
+    font-size: 30px;
+    color: white;
+
+}
+.team{
+    width: 100%;
+    height: 100vh;
+    margin-top: 70px;
+}
+.team1{
+    margin: 20px 10px 20px 20px;
+    width: 30%;
+    height: 80vh;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1));
+    background-size: cover;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    border-radius: 50px;
+    border: 2px solid var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+}
+.team1::before{
+    background-color: #E73C37;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background:linear-gradient(rgba(233, 229, 6, 0.8),rgba(218, 10, 10, 0.8));
+    z-index: -1;
+    transition: .5S;
+}
+.team1:hover::before{
+    height: 100%;
+}
+.team1 h3{
+    margin-top: 25px;
+    font-size: 45px;
+    font-weight: 600;
+    color: #fec53a;
+
+}
+.team1 p{
+    font-size: 30px;
+    color: white;
+
+}
+.team1 img{
+    margin-top: 20px;
+    
+}
+.up{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+    margin-left: 95%;
+    margin-bottom: 20px;
+}
